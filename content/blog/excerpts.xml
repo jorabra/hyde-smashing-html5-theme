@@ -1,0 +1,6 @@
+===
+title: BASIC blog excerpts feed
+extends: atom.html
+excerpts_only: true
+listable: false
+===

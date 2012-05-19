@@ -1,0 +1,3 @@
+extends: blog.html
+default_block: post
+listable: true

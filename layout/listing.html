@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_excerpt with context  %}
+{% block main %}
+{% block page_title %}<h1 class="title">{{ resource.meta.title }}</h1>{% endblock %}
+
+<ol id="posts-list" class="hfeed">
+{% for res in resource.node.walk_resources_sorted_by_time() %}
+<li>
+    {{ render_excerpt(res, "hentry") }}
+</li>
+{% endfor %}
+</ol>
+{% endblock %}
